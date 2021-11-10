@@ -1,3 +1,4 @@
+com\unicundi\iyepitia\discoejb\jar\exception\ResourceNotFoundException.class
 com\unicundi\iyepitia\discoejb\jar\repository\ICancionRepo.class
 com\unicundi\iyepitia\discoejb\jar\entity\Cancion.class
 com\unicundi\iyepitia\discoejb\jar\entity\Artista.class
@@ -11,6 +12,7 @@ com\unicundi\iyepitia\discoejb\jar\repository\impl\CancionRepoImpl.class
 com\unicundi\iyepitia\discoejb\jar\entity\Artista_.class
 com\unicundi\iyepitia\discoejb\jar\entity\Cancion_.class
 com\unicundi\iyepitia\discoejb\jar\service\impl\AlbumServiceImpl.class
+com\unicundi\iyepitia\discoejb\jar\exception\BussinessException.class
 com\unicundi\iyepitia\discoejb\jar\service\IAlbumService.class
 com\unicundi\iyepitia\discoejb\jar\service\impl\ArtistaServiceImpl.class
 com\unicundi\iyepitia\discoejb\jar\entity\Album.class

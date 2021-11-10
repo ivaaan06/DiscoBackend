@@ -29,8 +29,10 @@ import javax.persistence.Table;
 @Table(name="artista")
 @NamedQueries({
     @NamedQuery(name="Artista.ListarTodos", query = "SELECT a FROM Artista a"),
-    @NamedQuery(name="Artista.ListarNombreId", query= "SELECT a.nombre FROM Artista a WHERE a.id=:id")
-        
+    @NamedQuery(name="Artista.ListarNombreId", query= "SELECT a.nombre FROM Artista a WHERE a.id=:id"),
+    @NamedQuery(name="Artista.ListarGenero", query= "SELECT a FROM Artista a WHERE a.genero=:genero"),
+    @NamedQuery(name="Artista.ListarNacionalidad", query= "SELECT a FROM Artista a WHERE a.nacionalidad=:nacionalidad"),
+    @NamedQuery(name="Artista.BuscarNombreArtistico", query= "SELECT a FROM Artista a WHERE a.nombreArtistico=:nombreArtistico")
 })
 
 public class Artista implements Serializable {
@@ -64,7 +66,7 @@ public class Artista implements Serializable {
     
     
 
-    public Artista(Integer id, String nombre, String nombreArtistico, String genero, String nacionalidad, String imagen, Date fNacimiento, List<Cancion> canciones, List<Album> albunes) {
+    public Artista(Integer id, String nombre, String nombreArtistico, String genero, String nacionalidad, String imagen, Date fNacimiento, List<Album> albunes) {
         this.id = id;
         this.nombre = nombre;
         this.nombreArtistico = nombreArtistico;

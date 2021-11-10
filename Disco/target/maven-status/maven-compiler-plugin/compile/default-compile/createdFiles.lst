@@ -1,4 +1,6 @@
 org\netbeans\rest\application\config\ApplicationConfig.class
 com\unicundi\iyepitia\disco\controller\CancionController.class
 com\unicundi\iyepitia\disco\controller\ArtistaController.class
+com\unicundi\iyepitia\disco\exception\ExceptionHandler.class
+com\unicundi\iyepitia\disco\exception\ExceptionWrraper.class
 com\unicundi\iyepitia\disco\controller\AlbumController.class

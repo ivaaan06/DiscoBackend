@@ -32,6 +32,7 @@ public class ApplicationConfig extends Application {
         resources.add(com.unicundi.iyepitia.disco.controller.AlbumController.class);
         resources.add(com.unicundi.iyepitia.disco.controller.ArtistaController.class);
         resources.add(com.unicundi.iyepitia.disco.controller.CancionController.class);
+        resources.add(com.unicundi.iyepitia.disco.exception.ExceptionHandler.class);
     }
     
 }

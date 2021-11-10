@@ -6,6 +6,7 @@
 package com.unicundi.iyepitia.disco.controller;
 
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
+import com.unicundi.iyepitia.discoejb.jar.exception.ResourceNotFoundException;
 import com.unicundi.iyepitia.discoejb.jar.service.IArtistaService;
 import java.util.List;
 import javax.ejb.EJB;
@@ -52,7 +53,7 @@ public class ArtistaController {
     @GET
     @Path("/listarPorId/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response listarPorId(@PathParam("id") Integer id){
+    public Response listarPorId(@PathParam("id") Integer id) throws ResourceNotFoundException{
         Artista artista = this.services.listarPorId(id);
         return Response.status(Response.Status.OK).entity(artista).build();
     }
@@ -76,10 +77,33 @@ public class ArtistaController {
     @DELETE
     @Path("/eliminar/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response eliminar(@PathParam("id") Integer id) {
+    public Response eliminar(@PathParam("id") Integer id) throws ResourceNotFoundException{
             this.services.eliminar(id);
             return Response.status(Response.Status.NO_CONTENT).build();
     }
     
+    @GET
+    @Path("/listarGenero/{genero}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listarGenero(@PathParam("genero") String genero){
+        List<Artista> artistas = this.services.listarGenero(genero);
+        return Response.status(Response.Status.OK).entity(artistas).build();
+    }
+    
+    @GET
+    @Path("/listarNacionalidad/{nacionalidad}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listarNacionalidad(@PathParam("nacionalidad") String nacionalidad){
+        List<Artista> artistas = this.services.listarNacionalidad(nacionalidad);
+        return Response.status(Response.Status.OK).entity(artistas).build();
+    }
+    
+    @GET
+    @Path("/buscarNomArtistico/{NomArtistico}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response buscarNomArtistico(@PathParam("NomArtistico") String NomArtistico){
+        Artista artista = this.services.BuscarNomArtistico(NomArtistico);
+        return Response.status(Response.Status.OK).entity(artista).build();
+    }
     
 }
