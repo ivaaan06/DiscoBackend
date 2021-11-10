@@ -20,6 +20,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlTransient;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
@@ -142,7 +143,9 @@ public class Album {
     public void setNumVentas(Integer numVentas) {
         this.numVentas = numVentas;
     }
-
+    
+    @JsonIgnore
+    @XmlTransient
     public Artista getArtista() {
         return artista;
     }

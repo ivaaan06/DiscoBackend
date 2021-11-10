@@ -16,6 +16,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlTransient;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
@@ -57,12 +58,10 @@ public class Cancion {
     @Column(name="num_ventas", nullable = false)
     private Integer numVentas;
     
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="id_artista", nullable = false)
     private Artista artista;
     
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="id_album", nullable = false)
     private Album album;
@@ -155,6 +154,8 @@ public class Cancion {
         this.numVentas = numVentas;
     }
 
+    @JsonIgnore
+    @XmlTransient
     public Artista getArtista() {
         return artista;
     }
@@ -163,6 +164,8 @@ public class Cancion {
         this.artista = artista;
     }
 
+    @JsonIgnore
+    @XmlTransient
     public Album getAlbum() {
         return album;
     }
