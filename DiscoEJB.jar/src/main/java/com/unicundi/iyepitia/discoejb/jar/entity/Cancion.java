@@ -24,46 +24,51 @@ import org.codehaus.jackson.annotate.JsonIgnore;
  * @author Ivan Espitia
  */
 @Entity
-@Table(name="cancion")
+@Table(name = "cancion")
 @NamedQueries({
-    @NamedQuery(name="Cancion.ListarTodos", query = "SELECT c FROM Cancion c")
+    @NamedQuery(name = "Cancion.ListarTodos", query = "SELECT c FROM Cancion c"),
+    @NamedQuery(name = "Cancion.ListarNombreId", query = "SELECT c.nombre FROM Cancion c WHERE c.id=:id"),
+    @NamedQuery(name = "Cancion.ListarPrecio", query = "SELECT c FROM Cancion c WHERE c.precio=:precio "),
+    @NamedQuery(name = "Cancion.ListarNacionalidad", query = "SELECT c FROM Cancion c WHERE c.nacionalidad=:nacionalidad")
+
+
 })
 public class Cancion {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
-    @Column(name="nombre", nullable = false, length = 15)
+
+    @Column(name = "nombre", nullable = false, length = 15)
     private String nombre;
-    
-    @Column(name="descripcion", nullable = false, length = 30)
+
+    @Column(name = "descripcion", nullable = false, length = 30)
     private String descripcion;
-    
-    @Column(name="duracion", nullable = false)
+
+    @Column(name = "duracion", nullable = false)
     private Integer duracion;
-    
-    @Column(name="nacionalidad", nullable = false, length = 15)
+
+    @Column(name = "nacionalidad", nullable = false, length = 15)
     private String nacionalidad;
-    
-    @Column(name="precio", nullable = false)
+
+    @Column(name = "precio", nullable = false)
     private Integer precio;
-    
-    @Column(name="imagen", nullable = false, length = 30)
+
+    @Column(name = "imagen", nullable = false, length = 30)
     private String imagen;
-    
-    @Column(name="fecha_lanzamiento", nullable = false)
+
+    @Column(name = "fecha_lanzamiento", nullable = false)
     private Date fLanzamiento;
-    
-    @Column(name="num_ventas", nullable = false)
+
+    @Column(name = "num_ventas", nullable = false)
     private Integer numVentas;
-    
+
     @ManyToOne
-    @JoinColumn(name="id_artista", nullable = false)
+    @JoinColumn(name = "id_artista", nullable = false)
     private Artista artista;
-    
+
     @ManyToOne
-    @JoinColumn(name="id_album", nullable = false)
+    @JoinColumn(name = "id_album", nullable = false)
     private Album album;
 
     public Cancion() {
@@ -79,8 +84,6 @@ public class Cancion {
         this.fLanzamiento = fLanzamiento;
         this.numVentas = numVentas;
     }
-    
-    
 
     public Integer getId() {
         return id;
@@ -173,7 +176,5 @@ public class Cancion {
     public void setAlbum(Album album) {
         this.album = album;
     }
-    
-    
-    
+
 }
