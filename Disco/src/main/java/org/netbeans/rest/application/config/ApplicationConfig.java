@@ -32,7 +32,11 @@ public class ApplicationConfig extends Application {
         resources.add(com.unicundi.iyepitia.disco.controller.AlbumController.class);
         resources.add(com.unicundi.iyepitia.disco.controller.ArtistaController.class);
         resources.add(com.unicundi.iyepitia.disco.controller.CancionController.class);
+        resources.add(com.unicundi.iyepitia.disco.controller.UsuarioController.class);
+        resources.add(com.unicundi.iyepitia.disco.controller.UtilitariosController.class);
         resources.add(com.unicundi.iyepitia.disco.exception.ExceptionHandler.class);
+        resources.add(org.netbeans.rest.application.config.CorsFilter.class);
+        resources.add(org.netbeans.rest.application.config.Interceptor.class);
     }
     
 }

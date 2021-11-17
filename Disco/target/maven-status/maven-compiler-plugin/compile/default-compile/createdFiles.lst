@@ -1,6 +1,10 @@
+com\unicundi\iyepitia\disco\controller\UtilitariosController.class
 org\netbeans\rest\application\config\ApplicationConfig.class
-com\unicundi\iyepitia\disco\controller\CancionController.class
+org\netbeans\rest\application\config\Interceptor.class
+com\unicundi\iyepitia\disco\controller\UsuarioController.class
 com\unicundi\iyepitia\disco\controller\ArtistaController.class
 com\unicundi\iyepitia\disco\exception\ExceptionHandler.class
-com\unicundi\iyepitia\disco\exception\ExceptionWrraper.class
 com\unicundi\iyepitia\disco\controller\AlbumController.class
+org\netbeans\rest\application\config\CorsFilter.class
+com\unicundi\iyepitia\disco\controller\CancionController.class
+com\unicundi\iyepitia\disco\exception\ExceptionWrraper.class
