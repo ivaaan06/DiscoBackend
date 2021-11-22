@@ -22,7 +22,7 @@ import javax.persistence.Temporal;
 @Table(name = "ViewArtistaAlbum")
 @NamedNativeQueries({
     @NamedNativeQuery(name = "View.ListarCatalogoAlbum", query = "SELECT id as id_artista,nombre_artistico as nombre_artistico , genero as genero , nombre_album as nombre_album , precio as precio ,imagen_album as imagen_album , fecha_lanzamiento as fecha_lanzamiento FROM public. \"ViewArtistaAlbum\"" , resultClass=ViewArtistaAlbum.class)
-})
+}) 
 public class ViewArtistaAlbum {
     @Id
     private Integer id;          

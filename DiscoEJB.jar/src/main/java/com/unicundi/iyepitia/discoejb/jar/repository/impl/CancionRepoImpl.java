@@ -6,7 +6,7 @@
 package com.unicundi.iyepitia.discoejb.jar.repository.impl;
 
 import com.unicundi.iyepitia.discoejb.jar.entity.Cancion;
-import static com.unicundi.iyepitia.discoejb.jar.entity.Cancion_.id;
+//import static com.unicundi.iyepitia.discoejb.jar.entity.Cancion_.id;
 import com.unicundi.iyepitia.discoejb.jar.repository.ICancionRepo;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -84,8 +84,8 @@ public class CancionRepoImpl implements ICancionRepo{
     @Override
     public List<Cancion> listarNacionalidad(String nacionalidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    } 
+ 
     @Override
     public Cancion buscarArtistaNomArtistico(String NomArtistico) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

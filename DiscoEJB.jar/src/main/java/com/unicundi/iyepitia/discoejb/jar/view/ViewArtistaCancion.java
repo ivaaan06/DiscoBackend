@@ -25,7 +25,6 @@ import javax.persistence.Temporal;
     @NamedNativeQuery(name = "View.ListarCatalogoCanciones", query = "SELECT id as id_autor,nombre_artistico as nombre_artistico , genero as genero , nombre_cancion as nombre_cancion , precio as precio ,imagen_cancion as imagen_cancion , fecha_lanzamiento as fecha_lanzamiento FROM public. \"ViewArtistaCancion\"" , resultClass=ViewArtistaCancion.class)
 })
 
-
 public class ViewArtistaCancion {
     @Id
     private Integer id;          
@@ -44,7 +43,7 @@ public class ViewArtistaCancion {
     
     @Column(name = "imagen_cancion")
     private String imagen_cancion;
-    
+     
     @Column(name = "fecha_lanzamiento")
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date fLanzamiento;
