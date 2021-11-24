@@ -55,7 +55,21 @@ public class Interceptor implements ContainerRequestFilter {
         if (url.contains("/Usuarios/listarPorId")) {
             return;
         }
-
+         if (url.contains("/Artistas/guardar")) {
+            return;
+        }
+         if(url.contains("/Artistas/listarTodos")){
+             return;
+         }
+          if(url.contains("/Artistas/eliminar")){
+             return;
+         }
+           if(url.contains("/Artistas/listarPorId")){
+             return;
+         }
+           if(url.contains("/Artistas/editar")){
+             return;
+         }
         String token = requestContext.getHeaderString("Authorization");
         if (token == null) {
             wrraper = new ExceptionWrraper("401", "UNAUTHORIZED", "TOKEN INVALIDO", url);
