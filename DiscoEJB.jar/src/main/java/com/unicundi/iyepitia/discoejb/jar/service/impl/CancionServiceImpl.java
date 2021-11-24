@@ -8,6 +8,7 @@ package com.unicundi.iyepitia.discoejb.jar.service.impl;
 import com.unicundi.iyepitia.discoejb.jar.entity.Cancion;
 import com.unicundi.iyepitia.discoejb.jar.repository.ICancionRepo;
 import com.unicundi.iyepitia.discoejb.jar.service.ICancionService;
+import com.unicundi.iyepitia.discoejb.jar.view.ViewArtistaCancion;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -47,6 +48,11 @@ public class CancionServiceImpl implements ICancionService{
     @Override
     public void guardar(Cancion obj) {
        this.repo.guardar(obj);
+    }
+
+    @Override
+    public List<ViewArtistaCancion> listarCatalogoCancion() {
+        return this.repo.listarCatalogo();
     }
     
 }

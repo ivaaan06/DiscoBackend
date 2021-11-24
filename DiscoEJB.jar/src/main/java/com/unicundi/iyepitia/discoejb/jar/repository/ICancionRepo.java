@@ -6,6 +6,7 @@
 package com.unicundi.iyepitia.discoejb.jar.repository;
 
 import com.unicundi.iyepitia.discoejb.jar.entity.Cancion;
+import com.unicundi.iyepitia.discoejb.jar.view.ViewArtistaCancion;
 import java.util.List;
 
 /**
@@ -18,4 +19,5 @@ public interface ICancionRepo extends ICrud<Cancion, Integer>{
    public List<Cancion> listarNacionalidad (String nacionalidad);
    public Cancion buscarArtistaNomArtistico (String NomArtistico);
    public Cancion numeroVentas (Integer numVentas);
+   public List<ViewArtistaCancion> listarCatalogo ();
 }

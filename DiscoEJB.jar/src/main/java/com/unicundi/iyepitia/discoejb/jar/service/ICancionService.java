@@ -6,6 +6,7 @@
 package com.unicundi.iyepitia.discoejb.jar.service;
 
 import com.unicundi.iyepitia.discoejb.jar.entity.Cancion;
+import com.unicundi.iyepitia.discoejb.jar.view.ViewArtistaCancion;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -20,4 +21,5 @@ public interface ICancionService{
     public void editar(Cancion obj);
     public void eliminar(Integer id);
     public void guardar(Cancion obj);
+    public List<ViewArtistaCancion> listarCatalogoCancion ();
 }
