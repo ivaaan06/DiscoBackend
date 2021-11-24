@@ -1,51 +1,31 @@
-<<<<<<< HEAD
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\CancionRepoImpl.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\ArtistaServiceImpl.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\AlbumServiceImpl.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Usuario.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IArtistaRepo.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Cancion.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Artista.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\AlbumRepoImpl.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\ICancionService.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Permisos.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\ArtistaRepoImpl.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\UsuarioRepoImpl.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IUsuarioRepo.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Token.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\exception\BussinessException.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\ICancionRepo.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Login.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\NewSessionBean.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\exception\ResourceNotFoundException.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Album.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\UsuarioServiceImpl.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\ICrud.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\CancionServiceImpl.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Decode.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IUsuarioService.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IAlbumService.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Rol.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IAlbumRepo.java
-C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IArtistaService.java
-=======
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\CancionServiceImpl.java
-C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\CancionRepoImpl.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Usuario.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\ICancionService.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\view\ViewArtistaCancion.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Cancion.java
-C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IArtistaService.java
-C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\AlbumServiceImpl.java
-C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IArtistaRepo.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\UsuarioRepoImpl.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IAlbumRepo.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\ICrud.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Album.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\ArtistaRepoImpl.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Token.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Rol.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\AlbumRepoImpl.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IUsuarioRepo.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\view\ViewArtistaAlbum.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\ArtistaServiceImpl.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Artista.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\UsuarioServiceImpl.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Permisos.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\CancionRepoImpl.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IArtistaService.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\AlbumServiceImpl.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IArtistaRepo.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Decode.java
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Login.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\exception\ResourceNotFoundException.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\NewSessionBean.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\exception\BussinessException.java
-C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\ArtistaRepoImpl.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\ICancionRepo.java
-C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\AlbumRepoImpl.java
 C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IAlbumService.java
-C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\ArtistaServiceImpl.java
-C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Artista.java
->>>>>>> 043eeb5b5f5163f3ff2a4f85bb6b14270e97b3c5
+C:\Users\josep\Desktop\Personal\Universidad\Línea de profundización 2\Trabajos\Cristian\DiscoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IUsuarioService.java

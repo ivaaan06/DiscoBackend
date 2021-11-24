@@ -27,7 +27,7 @@ import javax.persistence.Temporal;
 
 public class ViewArtistaCancion {
     @Id
-    private Integer id;          
+    private Integer id_artista;          
     
     @Column(name = "nombre_artistico")
     private String nombreArtistico;    
@@ -51,8 +51,8 @@ public class ViewArtistaCancion {
     public ViewArtistaCancion() {
     }
 
-    public ViewArtistaCancion(Integer id, String nombreArtistico, String genero, String nombreCancion, Integer precio, String imagen_cancion, Date fLanzamiento) {
-        this.id = id;
+    public ViewArtistaCancion(Integer id_artista, String nombreArtistico, String genero, String nombreCancion, Integer precio, String imagen_cancion, Date fLanzamiento) {
+        this.id_artista = id_artista;
         this.nombreArtistico = nombreArtistico;
         this.genero = genero;
         this.nombreCancion = nombreCancion;
@@ -61,8 +61,8 @@ public class ViewArtistaCancion {
         this.fLanzamiento = fLanzamiento;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getId_artista() {
+        return id_artista;
     }
 
     public String getNombreArtistico() {
