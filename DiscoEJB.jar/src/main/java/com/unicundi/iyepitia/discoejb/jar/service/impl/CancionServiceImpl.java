@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.service.impl;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.CancionDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Cancion;
 import com.unicundi.iyepitia.discoejb.jar.repository.ICancionRepo;
 import com.unicundi.iyepitia.discoejb.jar.service.ICancionService;
@@ -24,35 +25,42 @@ public class CancionServiceImpl implements ICancionService{
     private ICancionRepo repo;
     
     @Override
-    public Cancion listarPorId(Integer id) {
-       Cancion cancion = this.repo.listarPorId(id);
+    public CancionDto listarPorId(Integer id) {
+       CancionDto cancion = this.repo.listarPorId(id);
        return cancion;
     }
 
     @Override
-    public List<Cancion> listarTodos() {
+    public List<CancionDto> listarTodos() {
         return this.repo.listarTodos();
     }
 
     @Override
-    public void editar(Cancion obj) {
+    public void editar(CancionDto obj) {
        this.repo.editar(obj);
     }
 
     @Override
     public void eliminar(Integer id) {
-        Cancion cancion = this.listarPorId(id);
+        CancionDto cancion = this.listarPorId(id);
         this.repo.eliminar(cancion);
     }
 
     @Override
-    public void guardar(Cancion obj) {
+    public void guardar(CancionDto obj) {
        this.repo.guardar(obj);
     }
 
-    @Override
+     @Override
     public List<ViewArtistaCancion> listarCatalogoCancion() {
         return this.repo.listarCatalogo();
     }
+
+    @Override
+    public List<CancionDto> listaCancionesAlbum(Integer id_album) {
+        return this.repo.listaCancionesAlbum(id_album);
+    }
+
+  
     
 }

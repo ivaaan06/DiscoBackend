@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.service;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
 import java.util.List;
@@ -16,9 +17,15 @@ import javax.ejb.Local;
  */
 @Local
 public interface IAlbumService {
+    public List<AlbumDto> obtener() ;
     public Album listarPorId(Integer id);
     public List<Album> listarTodos();
     public void editar(Album obj);
     public void eliminar(Integer id);
     public void guardar(Album obj);
+    public AlbumDto obtenerPorId(Integer id);
+    public void guardarDto(AlbumDto obj) ;
+    public void editarDto(AlbumDto obj) ;
+    public void eliminarDto(Integer id);
+            
 }

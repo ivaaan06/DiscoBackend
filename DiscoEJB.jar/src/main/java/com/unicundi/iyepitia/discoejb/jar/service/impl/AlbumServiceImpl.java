@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.service.impl;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
 import com.unicundi.iyepitia.discoejb.jar.repository.IAlbumRepo;
 import com.unicundi.iyepitia.discoejb.jar.service.IAlbumService;
@@ -47,6 +48,31 @@ public class AlbumServiceImpl implements IAlbumService{
     @Override
     public void guardar(Album obj) {
      this.repo.guardar(obj);
+    }
+
+    @Override
+    public List<AlbumDto> obtener() {
+        return this.repo.obtener();
+    }
+
+    @Override
+    public AlbumDto obtenerPorId(Integer intgr) {
+       return this.repo.obtenerPorId(intgr);
+    }
+
+    @Override
+    public void guardarDto(AlbumDto obj) {
+        this.repo.guardarDto(obj);
+    }
+
+    @Override
+    public void editarDto(AlbumDto obj) {
+        this.repo.editarDto(obj);
+    }
+
+    @Override
+    public void eliminarDto(Integer id) {
+        this.repo.eliminarDto(id);
     }
     
 }

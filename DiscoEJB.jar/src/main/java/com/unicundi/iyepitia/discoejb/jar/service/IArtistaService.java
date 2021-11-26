@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.service;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.NombreArtistaDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
 import com.unicundi.iyepitia.discoejb.jar.exception.ResourceNotFoundException;
 import java.util.List;
@@ -21,7 +22,7 @@ public interface IArtistaService {
     public void editar(Artista obj);
     public void eliminar(Integer id) throws ResourceNotFoundException;
     public void guardar(Artista obj);
-    public String ListarNombreid (Integer id);
+    public NombreArtistaDto ListarNombreid (Integer id);
     public List<Artista> listarGenero(String genero);
     public List<Artista> listarNacionalidad(String nacionalidad);
     public Artista BuscarNomArtistico(String NomArtistico);

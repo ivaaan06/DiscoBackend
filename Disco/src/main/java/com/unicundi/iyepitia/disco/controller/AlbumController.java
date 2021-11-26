@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.disco.controller;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
 import com.unicundi.iyepitia.discoejb.jar.service.IAlbumService;
 import java.util.List;
@@ -34,10 +35,27 @@ public class AlbumController {
     @POST
     @Path("/guardar")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response guardar(Album obj){
-        this.services.guardar(obj);
+    public Response guardar(AlbumDto obj){
+        this.services.guardarDto(obj);
         return Response.status(Response.Status.CREATED).build();
     }
+    
+    @GET
+    @Path("/obtener")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response obtener(){
+        List<AlbumDto> albums = this.services.obtener();
+        return Response.status(Response.Status.OK).entity(albums).build();
+    }
+    
+    @GET
+    @Path("/obtenerPorId/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response obtenerPorId(@PathParam("id")Integer id){
+        AlbumDto album = this.services.obtenerPorId(id);
+        return Response.status(Response.Status.OK).entity(album).build();
+    }
+    
     
     @GET
     @Path("/listarTodos")
@@ -58,9 +76,17 @@ public class AlbumController {
     @PUT
     @Path("/editar")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response editar(Album album){
-        this.services.editar(album);
+    public Response editar(AlbumDto album){
+        this.services.editarDto(album);
         return Response.status(Response.Status.OK).build();
+    }
+    
+    @DELETE
+    @Path("/eliminarDto/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response eliminarDto(@PathParam("id") Integer id) {
+            this.services.eliminarDto(id);
+            return Response.status(Response.Status.NO_CONTENT).build();
     }
     
     @DELETE

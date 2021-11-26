@@ -5,12 +5,14 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.repository.impl;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.NombreArtistaDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
 import com.unicundi.iyepitia.discoejb.jar.repository.IArtistaRepo;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 /**
@@ -50,9 +52,11 @@ public class ArtistaRepoImpl implements IArtistaRepo{
     }
 
     @Override
-    public String ListarNombreid(Integer id) {
-        TypedQuery query = (TypedQuery) this.em.createNamedQuery("Artista.ListarNombreId").setParameter("id", id);
-       return query.getSingleResult().toString();
+    public NombreArtistaDto ListarNombreid(Integer id) {  
+        Query query = this.em.createNamedQuery("Artista.ListarNombreId").setParameter(1, id);
+         NombreArtistaDto result = (NombreArtistaDto) query.getSingleResult();
+        return result;
+        
     }
 
     @Override

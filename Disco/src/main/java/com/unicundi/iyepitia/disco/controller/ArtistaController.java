@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.disco.controller;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.NombreArtistaDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
 import com.unicundi.iyepitia.discoejb.jar.exception.ResourceNotFoundException;
 import com.unicundi.iyepitia.discoejb.jar.service.IArtistaService;
@@ -62,7 +63,7 @@ public class ArtistaController {
     @Path("/listarNombreId/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response listarNombreId(@PathParam("id") Integer id){
-        String artista = this.services.ListarNombreid(id);
+        NombreArtistaDto artista = this.services.ListarNombreid(id);
         return Response.status(Response.Status.OK).entity(artista).build();
     }
     

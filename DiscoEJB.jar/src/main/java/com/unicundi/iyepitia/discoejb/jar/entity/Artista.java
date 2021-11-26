@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.entity;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.CancionDto;
 import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
@@ -16,6 +17,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -29,10 +32,12 @@ import javax.persistence.Table;
 @Table(name="artista")
 @NamedQueries({
     @NamedQuery(name="Artista.ListarTodos", query = "SELECT a FROM Artista a"),
-    @NamedQuery(name="Artista.ListarNombreId", query= "SELECT a.nombre FROM Artista a WHERE a.id=:id"),
     @NamedQuery(name="Artista.ListarGenero", query= "SELECT a FROM Artista a WHERE a.genero=:genero"),
     @NamedQuery(name="Artista.ListarNacionalidad", query= "SELECT a FROM Artista a WHERE a.nacionalidad=:nacionalidad"),
     @NamedQuery(name="Artista.BuscarNombreArtistico", query= "SELECT a FROM Artista a WHERE a.nombreArtistico=:nombreArtistico")
+})
+@NamedNativeQueries({
+    @NamedNativeQuery(name="Artista.ListarNombreId", query= "SELECT a.nombre_artistico FROM artista a WHERE a.id = ? "),
 })
 
 public class Artista implements Serializable {

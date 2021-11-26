@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.service.impl;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.NombreArtistaDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
 import com.unicundi.iyepitia.discoejb.jar.exception.ResourceNotFoundException;
 import com.unicundi.iyepitia.discoejb.jar.repository.IArtistaRepo;
@@ -59,7 +60,7 @@ public class ArtistaServiceImpl implements IArtistaService{
     }
 
     @Override
-    public String ListarNombreid(Integer id) {
+    public NombreArtistaDto ListarNombreid(Integer id) {
        return this.repo.ListarNombreid(id);
     }
 

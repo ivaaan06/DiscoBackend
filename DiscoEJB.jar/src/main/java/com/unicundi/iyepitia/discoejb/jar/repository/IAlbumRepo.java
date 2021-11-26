@@ -5,12 +5,19 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.repository;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
+import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
+import java.util.List;
 
 /**
  *
  * @author Ivan Espitia
  */
 public interface IAlbumRepo extends ICrud<Album, Integer>{
-    
+    public List<AlbumDto> obtener ();
+    public AlbumDto obtenerPorId(Integer id);
+    public void guardarDto(AlbumDto obj);
+    public void editarDto(AlbumDto obj);
+    public void eliminarDto(Integer id);
 }

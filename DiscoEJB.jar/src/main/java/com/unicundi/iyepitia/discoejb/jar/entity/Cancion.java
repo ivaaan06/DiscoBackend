@@ -5,6 +5,8 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.entity;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.CancionDto;
+import java.io.Serializable;
 import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +15,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -26,20 +30,22 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 @Entity
 @Table(name = "cancion")
 @NamedQueries({
-    @NamedQuery(name = "Cancion.ListarTodos", query = "SELECT c FROM Cancion c"),
+    @NamedQuery(name = "Cancion.ListarTodos", query = "SELECT c FROM CancionDto c"),
     @NamedQuery(name = "Cancion.ListarNombreId", query = "SELECT c.nombre FROM Cancion c WHERE c.id=:id"),
     @NamedQuery(name = "Cancion.ListarPrecio", query = "SELECT c FROM Cancion c WHERE c.precio=:precio "),
     @NamedQuery(name = "Cancion.ListarNacionalidad", query = "SELECT c FROM Cancion c WHERE c.nacionalidad=:nacionalidad")
 
-
 })
-public class Cancion {
+@NamedNativeQueries({
+    @NamedNativeQuery(name= "Cancion.ListaCancionesAlbum" , query="SELECT * FROM cancion c WHERE c.id_album = ? ",resultClass = CancionDto.class),
+})
+public class Cancion implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "nombre", nullable = false, length = 15)
+    @Column(name = "nombre", nullable = false, length = 30)
     private String nombre;
 
     @Column(name = "descripcion", nullable = false, length = 30)

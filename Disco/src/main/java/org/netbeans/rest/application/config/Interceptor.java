@@ -52,24 +52,51 @@ public class Interceptor implements ContainerRequestFilter {
             return;
         }
         //temporal
-        if (url.contains("/Usuarios/listarPorId")) {
+        if (url.contains("/Albums/obtenerPorId")) {
             return;
         }
-         if (url.contains("/Artistas/guardar")) {
+         if (url.contains("/Albums/guardar")) {
             return;
         }
-         if(url.contains("/Artistas/listarTodos")){
+         if(url.contains("/Albums/obtener")){
              return;
          }
-          if(url.contains("/Artistas/eliminar")){
+          if(url.contains("/Albums/eliminar")){
              return;
          }
            if(url.contains("/Artistas/listarPorId")){
              return;
          }
-           if(url.contains("/Artistas/editar")){
+           if(url.contains("/Artistas/listarTodos")){
              return;
          }
+           if(url.contains("/Albums/editar")){
+             return;
+         }
+           //
+          
+           if (url.contains("/Canciones/listarCancionesAlbum")) {
+            return;
+        }
+           if (url.contains("/Canciones/obtenerPorId")) {
+            return;
+        }
+         if (url.contains("/Canciones/guardar")) {
+            return;
+        }
+         if(url.contains("/Canciones/listarTodos")){
+             return;
+         }
+          if(url.contains("/Canciones/eliminar")){
+             return;
+         }
+           if(url.contains("/Canciones/listarPorId")){
+             return;
+         }
+           if(url.contains("/Canciones/editar")){
+             return;
+         }
+           
         String token = requestContext.getHeaderString("Authorization");
         if (token == null) {
             wrraper = new ExceptionWrraper("401", "UNAUTHORIZED", "TOKEN INVALIDO", url);

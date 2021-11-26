@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.disco.controller;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.CancionDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Cancion;
 import com.unicundi.iyepitia.discoejb.jar.service.ICancionService;
 import java.util.List;
@@ -35,7 +36,7 @@ public class CancionController {
     @POST
     @Path("/guardar")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response guardar(Cancion cancion) {
+    public Response guardar(CancionDto cancion) {
         this.services.guardar(cancion);
         return Response.status(Response.Status.CREATED).build();
     }
@@ -44,7 +45,7 @@ public class CancionController {
     @Path("/listarTodos")
     @Produces(MediaType.APPLICATION_JSON)
     public Response listarTodos() {
-        List<Cancion> canciones = this.services.listarTodos();
+        List<CancionDto> canciones = this.services.listarTodos();
         return Response.status(Response.Status.OK).entity(canciones).build();
     }
 
@@ -52,14 +53,14 @@ public class CancionController {
     @Path("/listarPorId/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response listarPorId(@PathParam("id") Integer id) {
-        Cancion cancion = this.services.listarPorId(id);
+        CancionDto cancion = this.services.listarPorId(id);
         return Response.status(Response.Status.OK).entity(cancion).build();
     }
 
     @PUT
     @Path("/editar")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response editar(Cancion cancion) {
+    public Response editar(CancionDto cancion) {
         this.services.editar(cancion);
         return Response.status(Response.Status.OK).build();
     }
@@ -70,5 +71,13 @@ public class CancionController {
     public Response eliminar(@PathParam("id") Integer id) {
         this.services.eliminar(id);
         return Response.status(Response.Status.NO_CONTENT).build();
+    }
+    
+     @GET
+    @Path("/listarCancionesAlbum/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listarCancionesAlbum(@PathParam("id") Integer id) {
+        List<CancionDto> canciones = this.services.listaCancionesAlbum(id);
+        return Response.status(Response.Status.OK).entity(canciones).build();
     }
 }

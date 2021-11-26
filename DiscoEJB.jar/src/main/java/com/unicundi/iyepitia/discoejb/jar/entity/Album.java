@@ -5,6 +5,8 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.entity;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -16,6 +18,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -32,7 +36,14 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 @NamedQueries({
     @NamedQuery(name="Album.ListarTodos", query = "SELECT a FROM Album a")
 })
-public class Album {
+@NamedNativeQueries({
+    @NamedNativeQuery(name= "Album.Obtener" , query="SELECT id,nombre, descripcion,duracion,precio,imagen,fecha_lanzamiento,num_ventas,id_artista FROM album",resultClass = AlbumDto.class),
+    @NamedNativeQuery(name= "Album.ListarPorId" , query="SELECT * FROM album WHERE album.id = ?",resultClass = AlbumDto.class),
+    @NamedNativeQuery(name= "Album.GuardarDto" , query="INSERT INTO public.album (nombre,descripcion,duracion,precio,imagen,fecha_lanzamiento,num_ventas,id_artista) VALUES (?,?,?,?,?,?,?,?)"),
+    @NamedNativeQuery(name= "Album.EditarDto" , query="UPDATE public.album SET nombre = ? ,descripcion = ? ,duracion = ? ,precio = ? ,imagen = ? ,fecha_lanzamiento = ? ,num_ventas= ? ,id_artista = ? WHERE album.id = ? "),
+    @NamedNativeQuery(name= "Album.EliminarDto" , query="DELETE FROM public.album WHERE album.id = ?")
+})
+public class Album implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

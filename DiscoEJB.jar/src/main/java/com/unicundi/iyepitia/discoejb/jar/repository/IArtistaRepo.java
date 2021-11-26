@@ -5,6 +5,7 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.repository;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.NombreArtistaDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * @author Ivan Espitia
  */
 public interface IArtistaRepo extends ICrud<Artista, Integer>{
-   public String ListarNombreid (Integer id);
+   public NombreArtistaDto ListarNombreid (Integer id);
    public List<Artista> listarGenero (String genero);
    public List<Artista> listarNacionalidad (String nacionalidad);
    public Artista buscarArtistaNomArtistico (String NomArtistico);
