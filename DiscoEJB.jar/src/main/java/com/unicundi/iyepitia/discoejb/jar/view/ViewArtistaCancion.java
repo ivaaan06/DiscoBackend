@@ -18,16 +18,18 @@ import javax.persistence.Temporal;
  *
  * @author Joseph
  */
-
 @Entity
 @Table(name = "ViewArtistaCancion")
 @NamedNativeQueries({
-    @NamedNativeQuery(name = "View.ListarCatalogoCanciones", query = "SELECT id as id_artista,nombre_artistico as nombre_artistico , genero as genero , nombre_cancion as nombre_cancion , precio as precio ,imagen_cancion as imagen_cancion , fecha_lanzamiento as fecha_lanzamiento FROM public. \"ViewArtistaCancion\"" , resultClass=ViewArtistaCancion.class)
+    @NamedNativeQuery(name = "View.ListarCatalogoCanciones", query = "SELECT id as id_artista,nombre_artistico as nombre_artistico , genero as genero , id_cancion as id_cancion, nombre_cancion as nombre_cancion , precio as precio ,imagen_cancion as imagen_cancion , fecha_lanzamiento as fecha_lanzamiento FROM public. \"ViewArtistaCancion\"" , resultClass=ViewArtistaCancion.class)
 })
 
 public class ViewArtistaCancion {
     @Id
-    private Integer id_artista;          
+    private Integer id_artista;   
+    
+    @Column(name = "id_cancion")
+    private Integer id_cancion;
     
     @Column(name = "nombre_artistico")
     private String nombreArtistico;    
@@ -51,14 +53,19 @@ public class ViewArtistaCancion {
     public ViewArtistaCancion() {
     }
 
-    public ViewArtistaCancion(Integer id_artista, String nombreArtistico, String genero, String nombreCancion, Integer precio, String imagen_cancion, Date fLanzamiento) {
+    public ViewArtistaCancion(Integer id_artista, Integer id_cancion, String nombreArtistico, String genero, String nombreCancion, Integer precio, String imagen_cancion, Date fLanzamiento) {
         this.id_artista = id_artista;
+        this.id_cancion = id_cancion;
         this.nombreArtistico = nombreArtistico;
         this.genero = genero;
         this.nombreCancion = nombreCancion;
         this.precio = precio;
         this.imagen_cancion = imagen_cancion;
         this.fLanzamiento = fLanzamiento;
+    }
+
+    public Integer getId_cancion() {
+        return id_cancion;
     }
 
     public Integer getId_artista() {

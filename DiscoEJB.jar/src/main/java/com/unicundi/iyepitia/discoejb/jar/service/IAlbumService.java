@@ -8,6 +8,7 @@ package com.unicundi.iyepitia.discoejb.jar.service;
 import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
+import com.unicundi.iyepitia.discoejb.jar.view.ViewArtistaAlbum;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -27,5 +28,7 @@ public interface IAlbumService {
     public void guardarDto(AlbumDto obj) ;
     public void editarDto(AlbumDto obj) ;
     public void eliminarDto(Integer id);
+
+    public List<ViewArtistaAlbum> listarCatalogoAlbum();
             
 }

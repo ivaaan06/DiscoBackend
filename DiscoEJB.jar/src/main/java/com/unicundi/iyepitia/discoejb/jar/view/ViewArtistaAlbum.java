@@ -21,11 +21,14 @@ import javax.persistence.Temporal;
 @Entity
 @Table(name = "ViewArtistaAlbum")
 @NamedNativeQueries({
-    @NamedNativeQuery(name = "View.ListarCatalogoAlbum", query = "SELECT id as id_artista,nombre_artistico as nombre_artistico , genero as genero , nombre_album as nombre_album , precio as precio ,imagen_album as imagen_album , fecha_lanzamiento as fecha_lanzamiento FROM public. \"ViewArtistaAlbum\"" , resultClass=ViewArtistaAlbum.class)
+    @NamedNativeQuery(name = "ViewArtistaAlbum.ListarCatalogoAlbum", query = "SELECT id as id_artista,nombre_artistico as nombre_artistico , genero as genero ,id_album as id_album ,nombre_album as nombre_album , precio as precio ,imagen_album as imagen_album , fecha_lanzamiento as fecha_lanzamiento FROM public. \"ViewArtistaAlbum\"" , resultClass=ViewArtistaAlbum.class)
 }) 
 public class ViewArtistaAlbum {
     @Id
-    private Integer id;          
+    private Integer id_artista;     
+    
+    @Column(name = "id_album")
+    private String id_album;  
     
     @Column(name = "nombre_artistico")
     private String nombreArtistico;    
@@ -49,8 +52,9 @@ public class ViewArtistaAlbum {
     public ViewArtistaAlbum() {
     }
 
-    public ViewArtistaAlbum(Integer id, String nombreArtistico, String genero, String nombreAlbum, Integer precio, String imagen_cancion, Date fLanzamiento) {
-        this.id = id;
+    public ViewArtistaAlbum(Integer id_artista, String id_album, String nombreArtistico, String genero, String nombreAlbum, Integer precio, String imagen_cancion, Date fLanzamiento) {
+        this.id_artista = id_artista;
+        this.id_album = id_album;
         this.nombreArtistico = nombreArtistico;
         this.genero = genero;
         this.nombreAlbum = nombreAlbum;
@@ -59,8 +63,13 @@ public class ViewArtistaAlbum {
         this.fLanzamiento = fLanzamiento;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getId_artista() {
+        return id_artista;
+    }
+
+    
+    public String getId_album() {
+        return id_album;
     }
 
     public String getNombreArtistico() {

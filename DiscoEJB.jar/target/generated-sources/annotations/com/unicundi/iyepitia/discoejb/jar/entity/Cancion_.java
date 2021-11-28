@@ -2,12 +2,13 @@ package com.unicundi.iyepitia.discoejb.jar.entity;
 
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
 import com.unicundi.iyepitia.discoejb.jar.entity.Artista;
+import com.unicundi.iyepitia.discoejb.jar.entity.Carrito;
 import java.sql.Date;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.7.7.v20200504-rNA", date="2021-11-26T16:23:45")
+@Generated(value="EclipseLink-2.7.7.v20200504-rNA", date="2021-11-27T19:20:19")
 @StaticMetamodel(Cancion.class)
 public class Cancion_ { 
 
@@ -20,6 +21,7 @@ public class Cancion_ {
     public static volatile SingularAttribute<Cancion, Integer> duracion;
     public static volatile SingularAttribute<Cancion, String> imagen;
     public static volatile SingularAttribute<Cancion, Integer> id;
+    public static volatile SingularAttribute<Cancion, Carrito> carrito;
     public static volatile SingularAttribute<Cancion, String> nombre;
     public static volatile SingularAttribute<Cancion, String> nacionalidad;
 
