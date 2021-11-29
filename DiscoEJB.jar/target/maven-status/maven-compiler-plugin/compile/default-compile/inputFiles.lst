@@ -1,15 +1,19 @@
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\CancionRepoImpl.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\ArtistaServiceImpl.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\AlbumServiceImpl.java
+C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\ICarritoService.java
+C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\CarritoRepoImpl.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Usuario.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IArtistaRepo.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\NombreArtistaDto.java
+C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Carrito.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\view\ViewArtistaAlbum.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Cancion.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Artista.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\AlbumRepoImpl.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\ICancionService.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Permisos.java
+C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\ICarritoServiceImpl.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\ArtistaRepoImpl.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\impl\UsuarioRepoImpl.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IUsuarioRepo.java
@@ -29,6 +33,7 @@ C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\D
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\impl\CancionServiceImpl.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\dto\Decode.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IUsuarioService.java
+C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\ICarritoRepo.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\service\IAlbumService.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\entity\Rol.java
 C:\Users\Ivan Espitia\Desktop\UDEC\Noveno Semestre II\Linea II\ProyectoBackend\DiscoEJB.jar\src\main\java\com\unicundi\iyepitia\discoejb\jar\repository\IAlbumRepo.java

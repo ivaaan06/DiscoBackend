@@ -8,6 +8,7 @@ package com.unicundi.iyepitia.discoejb.jar.repository.impl;
 import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
 import com.unicundi.iyepitia.discoejb.jar.repository.IAlbumRepo;
+import com.unicundi.iyepitia.discoejb.jar.view.ViewArtistaAlbum;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -108,4 +109,10 @@ public class AlbumRepoImpl implements IAlbumRepo {
         return result;
     }
 
+
+@Override
+    public List<ViewArtistaAlbum> listarCatalogo() {
+        TypedQuery<ViewArtistaAlbum> query = this.em.createNamedQuery("ViewArtistaAlbum.ListarCatalogoAlbum", ViewArtistaAlbum.class);
+        return query.getResultList();
+    }
 }

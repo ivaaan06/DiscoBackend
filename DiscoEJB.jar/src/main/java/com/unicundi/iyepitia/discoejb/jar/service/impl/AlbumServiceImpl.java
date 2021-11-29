@@ -9,6 +9,7 @@ import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
 import com.unicundi.iyepitia.discoejb.jar.repository.IAlbumRepo;
 import com.unicundi.iyepitia.discoejb.jar.service.IAlbumService;
+import com.unicundi.iyepitia.discoejb.jar.view.ViewArtistaAlbum;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -75,9 +76,15 @@ public class AlbumServiceImpl implements IAlbumService{
         this.repo.eliminarDto(id);
     }
 
+
     @Override
     public List<AlbumDto> listarIdArtista(Integer id) {
         return this.repo.listarIdArtista(id);
     }
     
+    @Override
+    public List<ViewArtistaAlbum> listarCatalogoAlbum() {
+        return this.repo.listarCatalogo();
+    }
+
 }

@@ -8,6 +8,7 @@ package com.unicundi.iyepitia.disco.controller;
 import com.unicundi.iyepitia.discoejb.jar.dto.AlbumDto;
 import com.unicundi.iyepitia.discoejb.jar.entity.Album;
 import com.unicundi.iyepitia.discoejb.jar.service.IAlbumService;
+import com.unicundi.iyepitia.discoejb.jar.view.ViewArtistaAlbum;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -96,6 +97,7 @@ public class AlbumController {
             this.services.eliminar(id);
             return Response.status(Response.Status.NO_CONTENT).build();
     }
+
     
     @GET
     @Path("/listarIdArtista/{id}")
@@ -105,4 +107,11 @@ public class AlbumController {
         return Response.status(Response.Status.OK).entity(albums).build();
     }
     
+    @GET
+    @Path("/listarCatalogo")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listarCatalogo() {
+        List<ViewArtistaAlbum> albums = this.services.listarCatalogoAlbum();
+        return Response.status(Response.Status.OK).entity(albums).build();
+    }
 }

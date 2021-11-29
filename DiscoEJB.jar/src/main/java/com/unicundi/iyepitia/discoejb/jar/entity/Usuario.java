@@ -7,6 +7,7 @@ package com.unicundi.iyepitia.discoejb.jar.entity;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,6 +21,7 @@ import javax.persistence.NamedNativeQueries;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -69,9 +71,11 @@ public class Usuario implements Serializable{
     @ManyToOne
     @JoinColumn(name="rol", nullable = false)
     private Rol rol;
+    
+    @OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Carrito> pedidos;
 
-    public Usuario(int id, String nombre, String documento, String imagen, String email, String password, Date fNacimiento, String token, Rol rol) {
-        this.id = id;
+    public Usuario(String nombre, String documento, String imagen, String email, String password, Date fNacimiento, String token, Rol rol, List<Carrito> pedidos) {
         this.nombre = nombre;
         this.documento = documento;
         this.imagen = imagen;
@@ -80,7 +84,10 @@ public class Usuario implements Serializable{
         this.fNacimiento = fNacimiento;
         this.token = token;
         this.rol = rol;
+        this.pedidos = pedidos;
     }
+
+    
 
     public Usuario() {
     }
@@ -153,6 +160,14 @@ public class Usuario implements Serializable{
 
     public void setfNacimiento(Date fNacimiento) {
         this.fNacimiento = fNacimiento;
+    }
+
+    public List<Carrito> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<Carrito> pedidos) {
+        this.pedidos = pedidos;
     }
     
     

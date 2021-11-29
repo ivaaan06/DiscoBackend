@@ -1,6 +1,7 @@
 com\unicundi\iyepitia\disco\controller\UtilitariosController.class
 org\netbeans\rest\application\config\ApplicationConfig.class
 org\netbeans\rest\application\config\Interceptor.class
+com\unicundi\iyepitia\disco\controller\CarritoController.class
 com\unicundi\iyepitia\disco\controller\UsuarioController.class
 com\unicundi\iyepitia\disco\controller\ArtistaController.class
 com\unicundi\iyepitia\disco\exception\ExceptionHandler.class

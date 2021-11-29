@@ -51,7 +51,30 @@ public class Interceptor implements ContainerRequestFilter {
         if (url.contains("/auth/actualizarToken")) {
             return;
         }
-        if (url.contains("/auth/cerrarSession")) {
+         if(url.contains("/Albums/obtener")){
+             return;
+         }
+          if(url.contains("/Albums/eliminar")){
+             return;
+         }
+           if(url.contains("/Artistas/listarPorId")){
+             return;
+         }
+           if(url.contains("/Artistas/listarTodos")){
+             return;
+         }
+           if(url.contains("/Albums/editar")){
+            return;
+        }
+        if (url.contains("/Canciones/listarCatalogo")) {
+            return;
+        }
+        if (url.contains("/Albums/listarCatalogo")) {
+            return;
+        }
+           //
+          
+           if (url.contains("/Canciones/listarCancionesAlbum")) {
             return;
         }
        if (url.contains("/auth/consultarRol")) {
