@@ -74,5 +74,10 @@ public class AlbumServiceImpl implements IAlbumService{
     public void eliminarDto(Integer id) {
         this.repo.eliminarDto(id);
     }
+
+    @Override
+    public List<AlbumDto> listarIdArtista(Integer id) {
+        return this.repo.listarIdArtista(id);
+    }
     
 }

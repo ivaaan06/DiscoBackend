@@ -41,7 +41,9 @@ import org.codehaus.jackson.annotate.JsonIgnore;
     @NamedNativeQuery(name= "Album.ListarPorId" , query="SELECT * FROM album WHERE album.id = ?",resultClass = AlbumDto.class),
     @NamedNativeQuery(name= "Album.GuardarDto" , query="INSERT INTO public.album (nombre,descripcion,duracion,precio,imagen,fecha_lanzamiento,num_ventas,id_artista) VALUES (?,?,?,?,?,?,?,?)"),
     @NamedNativeQuery(name= "Album.EditarDto" , query="UPDATE public.album SET nombre = ? ,descripcion = ? ,duracion = ? ,precio = ? ,imagen = ? ,fecha_lanzamiento = ? ,num_ventas= ? ,id_artista = ? WHERE album.id = ? "),
-    @NamedNativeQuery(name= "Album.EliminarDto" , query="DELETE FROM public.album WHERE album.id = ?")
+    @NamedNativeQuery(name= "Album.EliminarDto" , query="DELETE FROM public.album WHERE album.id = ?"),
+    @NamedNativeQuery(name= "Album.ListaeIdArtista" , query="SELECT * FROM public.album WHERE album.id_artista = ? ", resultClass = AlbumDto.class)
+        
 })
 public class Album implements Serializable{
     @Id

@@ -101,4 +101,11 @@ public class AlbumRepoImpl implements IAlbumRepo {
                 .executeUpdate();
     }
 
+    @Override
+    public List<AlbumDto> listarIdArtista(Integer id) {
+        Query query = em.createNamedQuery("Album.ListaeIdArtista", AlbumDto.class).setParameter(1, id);
+        List<AlbumDto> result = query.getResultList();
+        return result;
+    }
+
 }

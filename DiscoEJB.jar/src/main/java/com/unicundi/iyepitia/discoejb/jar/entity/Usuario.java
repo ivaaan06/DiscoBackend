@@ -32,6 +32,9 @@ import javax.persistence.Table;
     @NamedQuery(name="Usuario.ListarTodos", query = "SELECT u FROM Usuario u"),
      @NamedQuery(name="Usuario.login", query = "SELECT u FROM Usuario u WHERE u.email=:email AND u.password=:password"),
      @NamedQuery(name="Usuario.consutarToken", query = "SELECT u.token FROM Usuario u WHERE u.id=:id"),
+     @NamedQuery(name="Usuario.LoginToken", query = "SELECT u.token FROM Usuario u WHERE u.email=:email AND u.password=:password"),
+     @NamedQuery(name="Usuario.consutarUsuario", query = "SELECT u FROM Usuario u WHERE u.id=:id"),
+     @NamedQuery(name="Usuario.consutarRol", query = "SELECT u.rol FROM Usuario u WHERE u.id=:id")
 })
 @NamedNativeQueries({
     @NamedNativeQuery( name= "Usuario.actualizarToken", query ="UPDATE usuario SET token = ? WHERE id=?"),

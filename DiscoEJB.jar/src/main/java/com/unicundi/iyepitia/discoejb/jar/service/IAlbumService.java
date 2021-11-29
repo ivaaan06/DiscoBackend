@@ -27,5 +27,5 @@ public interface IAlbumService {
     public void guardarDto(AlbumDto obj) ;
     public void editarDto(AlbumDto obj) ;
     public void eliminarDto(Integer id);
-            
+    public List<AlbumDto> listarIdArtista(Integer id);   
 }

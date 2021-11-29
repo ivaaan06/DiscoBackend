@@ -6,8 +6,10 @@
 package com.unicundi.iyepitia.discoejb.jar.service.impl;
 
 import com.unicundi.iyepitia.discoejb.jar.dto.Login;
+import com.unicundi.iyepitia.discoejb.jar.dto.RolDto;
 import com.unicundi.iyepitia.discoejb.jar.dto.Token;
 import com.unicundi.iyepitia.discoejb.jar.entity.Cancion;
+import com.unicundi.iyepitia.discoejb.jar.entity.Rol;
 import com.unicundi.iyepitia.discoejb.jar.entity.Usuario;
 import com.unicundi.iyepitia.discoejb.jar.exception.BussinessException;
 import com.unicundi.iyepitia.discoejb.jar.exception.ResourceNotFoundException;
@@ -35,10 +37,27 @@ public class UsuarioServiceImpl implements IUsuarioService{
     @Override
     public Usuario login(String email, String password) throws BussinessException {
         Usuario usuario = repo.login(email, password);
-        if (usuario != null) {
-            return usuario;
-        } else {
-            throw new BussinessException("Correo y/o contrasena incorrectos", "/login");
+         if (usuario != null) {
+            String key = "IG95Jup^";
+            long tiempo = System.currentTimeMillis();
+            
+            Map<String, Object> permisos = new HashMap<>();
+            permisos.put(usuario.getRol().getId().toString(),usuario.getRol().getNombre());
+            String id = Integer.toString(usuario.getId());
+            String jwt = Jwts.builder()
+                    .signWith(SignatureAlgorithm.HS512, key)
+                    .setSubject(id)
+                    .setIssuedAt(new Date(tiempo))
+                    .setExpiration(new Date(tiempo+900000) )
+                    .claim("permisos", permisos)
+                    .compact();
+            
+            Token token = new Token(jwt);
+            this.repo.actualizarToken(token.getToken(), usuario.getId());
+             Usuario usuario2 = repo.consultarUsuario(Integer.valueOf(id));
+            return usuario2; 
+        }else{
+            throw new BussinessException("Correo y/o contrasena incorrecta, por favor verifique","/auto/login");
         }
     }
 
@@ -130,6 +149,16 @@ public class UsuarioServiceImpl implements IUsuarioService{
     @Override
     public String consultarToken(Integer intgr){
         return this.repo.consultarToken(intgr);
+    }
+
+    @Override
+    public String loginString(String email, String password){
+       return this.repo.loginToken(email, password);
+    }
+
+    @Override
+    public Rol consultarRol(Integer intgr) {
+        return this.repo.consultarRol(intgr);
     }
 
     

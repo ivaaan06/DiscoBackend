@@ -97,4 +97,12 @@ public class AlbumController {
             return Response.status(Response.Status.NO_CONTENT).build();
     }
     
+    @GET
+    @Path("/listarIdArtista/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listarIdArtista(@PathParam("id")Integer id){
+        List<AlbumDto> albums = this.services.listarIdArtista(id);
+        return Response.status(Response.Status.OK).entity(albums).build();
+    }
+    
 }

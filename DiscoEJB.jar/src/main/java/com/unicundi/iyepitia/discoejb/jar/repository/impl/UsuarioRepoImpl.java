@@ -5,7 +5,9 @@
  */
 package com.unicundi.iyepitia.discoejb.jar.repository.impl;
 
+import com.unicundi.iyepitia.discoejb.jar.dto.RolDto;
 import com.unicundi.iyepitia.discoejb.jar.dto.Token;
+import com.unicundi.iyepitia.discoejb.jar.entity.Rol;
 import com.unicundi.iyepitia.discoejb.jar.entity.Usuario;
 import com.unicundi.iyepitia.discoejb.jar.repository.IUsuarioRepo;
 import java.util.List;
@@ -72,6 +74,25 @@ public class UsuarioRepoImpl implements IUsuarioRepo{
     public String consultarToken(Integer id) {
         TypedQuery query = (TypedQuery) this.em.createNamedQuery("Usuario.consutarToken").setParameter("id", id);
        return query.getSingleResult().toString();
+    }
+
+    @Override
+    public String loginToken(String email, String password) {
+         TypedQuery query = (TypedQuery) this.em.createNamedQuery("Usuario.LoginToken")
+               .setParameter("email",email).setParameter("password",password );
+       return  query.getSingleResult().toString();
+    }
+
+    @Override
+    public Usuario consultarUsuario(Integer id) {
+       TypedQuery query = (TypedQuery) this.em.createNamedQuery("Usuario.consutarUsuario").setParameter("id", id);
+       return (Usuario) query.getSingleResult();
+    }
+
+    @Override
+    public Rol consultarRol(Integer id) {
+       TypedQuery query = (TypedQuery) this.em.createNamedQuery("Usuario.consutarRol",Rol.class).setParameter("id", id);
+       return (Rol) query.getSingleResult();
     }
 
  

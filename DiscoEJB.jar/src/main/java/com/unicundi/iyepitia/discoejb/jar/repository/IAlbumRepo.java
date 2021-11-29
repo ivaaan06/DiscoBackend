@@ -16,6 +16,7 @@ import java.util.List;
  */
 public interface IAlbumRepo extends ICrud<Album, Integer>{
     public List<AlbumDto> obtener ();
+    public List<AlbumDto> listarIdArtista (Integer id);
     public AlbumDto obtenerPorId(Integer id);
     public void guardarDto(AlbumDto obj);
     public void editarDto(AlbumDto obj);

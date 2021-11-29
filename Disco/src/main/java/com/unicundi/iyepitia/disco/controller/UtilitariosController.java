@@ -6,7 +6,9 @@
 package com.unicundi.iyepitia.disco.controller;
 
 import com.unicundi.iyepitia.discoejb.jar.dto.Login;
+import com.unicundi.iyepitia.discoejb.jar.dto.RolDto;
 import com.unicundi.iyepitia.discoejb.jar.dto.Token;
+import com.unicundi.iyepitia.discoejb.jar.entity.Rol;
 import com.unicundi.iyepitia.discoejb.jar.entity.Usuario;
 import com.unicundi.iyepitia.discoejb.jar.exception.BussinessException;
 import com.unicundi.iyepitia.discoejb.jar.exception.ResourceNotFoundException;
@@ -38,7 +40,13 @@ public class UtilitariosController {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response loginToken(Login usuario)throws BussinessException{
         Token token = this.service.loginToken(usuario);
-        return Response.status(Response.Status.OK).entity(token).build();
+        if(token != null){
+              return Response.status(Response.Status.OK).entity(token).build();
+        }else{
+            return Response.status(Response.Status.UNAUTHORIZED).entity("").build();
+        }
+        
+        
     }
     
     @PUT
@@ -56,4 +64,21 @@ public class UtilitariosController {
         return Response.status(Response.Status.OK).entity("Session cerrada").build();
     }
     
+    @POST
+    @Path("/login")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response login(Login usuario)throws BussinessException, Exception{
+        Usuario usuario2 = this.service.login(usuario.getEmail(),usuario.getPassword());
+      
+              return Response.status(Response.Status.OK).entity(usuario2).build();
+        
+        
+    }
+    @GET
+    @Path("/consultarRol/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response consultarRol(@PathParam("id") Integer id){
+        Rol rol =  this.service.consultarRol(id);
+        return Response.status(Response.Status.OK).entity(rol).build();
+    }
 }

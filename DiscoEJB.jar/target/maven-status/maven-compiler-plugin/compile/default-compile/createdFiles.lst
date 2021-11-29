@@ -19,6 +19,7 @@ com\unicundi\iyepitia\discoejb\jar\repository\impl\UsuarioRepoImpl.class
 com\unicundi\iyepitia\discoejb\jar\service\impl\AlbumServiceImpl.class
 com\unicundi\iyepitia\discoejb\jar\dto\NombreArtistaDto.class
 com\unicundi\iyepitia\discoejb\jar\dto\Login.class
+com\unicundi\iyepitia\discoejb\jar\dto\RolDto_.class
 com\unicundi\iyepitia\discoejb\jar\exception\BussinessException.class
 com\unicundi\iyepitia\discoejb\jar\service\impl\ArtistaServiceImpl.class
 com\unicundi\iyepitia\discoejb\jar\entity\Album.class
@@ -35,6 +36,7 @@ com\unicundi\iyepitia\discoejb\jar\repository\ICrud.class
 com\unicundi\iyepitia\discoejb\jar\entity\Cancion_.class
 com\unicundi\iyepitia\discoejb\jar\entity\Rol_.class
 com\unicundi\iyepitia\discoejb\jar\service\impl\UsuarioServiceImpl.class
+com\unicundi\iyepitia\discoejb\jar\dto\RolDto.class
 com\unicundi\iyepitia\discoejb\jar\entity\Usuario.class
 com\unicundi\iyepitia\discoejb\jar\service\IAlbumService.class
 com\unicundi\iyepitia\discoejb\jar\view\ViewArtistaCancion.class

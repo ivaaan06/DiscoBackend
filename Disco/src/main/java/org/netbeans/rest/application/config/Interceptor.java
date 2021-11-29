@@ -45,58 +45,22 @@ public class Interceptor implements ContainerRequestFilter {
         if (url.contains("/auth/token")) {
             return;
         }
+        if (url.contains("/auth/login")) {
+            return;
+        }
         if (url.contains("/auth/actualizarToken")) {
             return;
         }
         if (url.contains("/auth/cerrarSession")) {
             return;
         }
-        //temporal
-        if (url.contains("/Albums/obtenerPorId")) {
+       if (url.contains("/auth/consultarRol")) {
             return;
         }
-         if (url.contains("/Albums/guardar")) {
+       //temporal
+        if (url.contains("/Artistas/listarTodos")) {
             return;
         }
-         if(url.contains("/Albums/obtener")){
-             return;
-         }
-          if(url.contains("/Albums/eliminar")){
-             return;
-         }
-           if(url.contains("/Artistas/listarPorId")){
-             return;
-         }
-           if(url.contains("/Artistas/listarTodos")){
-             return;
-         }
-           if(url.contains("/Albums/editar")){
-             return;
-         }
-           //
-          
-           if (url.contains("/Canciones/listarCancionesAlbum")) {
-            return;
-        }
-           if (url.contains("/Canciones/obtenerPorId")) {
-            return;
-        }
-         if (url.contains("/Canciones/guardar")) {
-            return;
-        }
-         if(url.contains("/Canciones/listarTodos")){
-             return;
-         }
-          if(url.contains("/Canciones/eliminar")){
-             return;
-         }
-           if(url.contains("/Canciones/listarPorId")){
-             return;
-         }
-           if(url.contains("/Canciones/editar")){
-             return;
-         }
-           
         String token = requestContext.getHeaderString("Authorization");
         if (token == null) {
             wrraper = new ExceptionWrraper("401", "UNAUTHORIZED", "TOKEN INVALIDO", url);
@@ -120,6 +84,9 @@ public class Interceptor implements ContainerRequestFilter {
                 System.out.println(tokendb);
                 if (tokendb.equals(token)) {
                     
+                    if (url.contains("/Artistas") && claims.toString().contains("Administrador")) {
+                        return;
+                    }
                     if (url.contains("/Canciones") && claims.toString().contains("Administrador")) {
                         return;
                     }
