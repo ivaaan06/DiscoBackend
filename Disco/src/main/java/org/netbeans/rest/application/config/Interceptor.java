@@ -71,8 +71,14 @@ public class Interceptor implements ContainerRequestFilter {
              return;
          }
            if(url.contains("/Albums/editar")){
-             return;
-         }
+            return;
+        }
+        if (url.contains("/Canciones/listarCatalogo")) {
+            return;
+        }
+        if (url.contains("/Albums/listarCatalogo")) {
+            return;
+        }
            //
           
            if (url.contains("/Canciones/listarCancionesAlbum")) {

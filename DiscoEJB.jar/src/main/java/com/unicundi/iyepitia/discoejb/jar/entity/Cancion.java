@@ -74,7 +74,7 @@ public class Cancion implements Serializable{
     private Artista artista;
 
     @ManyToOne
-    @JoinColumn(name = "id_album", nullable = false)
+    @JoinColumn(name = "id_album", nullable = true)
     private Album album;
     
     @ManyToOne
