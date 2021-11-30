@@ -62,8 +62,8 @@ public class AlbumController {
     @Path("/listarTodos")
     @Produces(MediaType.APPLICATION_JSON)
     public Response listarTodos(){
-        List<Album> artistas = this.services.listarTodos();
-        return Response.status(Response.Status.OK).entity(artistas).build();
+        List<Album> albumes = this.services.listarTodos();
+        return Response.status(Response.Status.OK).entity(albumes).build();
     }
     
     @GET

@@ -42,48 +42,82 @@ public class Interceptor implements ContainerRequestFilter {
         ExceptionWrraper wrraper;
 
         //urls que no necesitan token
-        if (url.contains("/auth/token")) {
-            return;
-        }
-        if (url.contains("/auth/login")) {
-            return;
-        }
-        if (url.contains("/auth/actualizarToken")) {
-            return;
-        }
-         if(url.contains("/Albums/obtener")){
-             return;
-         }
-          if(url.contains("/Albums/eliminar")){
-             return;
-         }
-           if(url.contains("/Artistas/listarPorId")){
-             return;
-         }
-           if(url.contains("/Artistas/listarTodos")){
-             return;
-         }
-           if(url.contains("/Albums/editar")){
-            return;
-        }
-        if (url.contains("/Canciones/listarCatalogo")) {
-            return;
-        }
-        if (url.contains("/Albums/listarCatalogo")) {
-            return;
-        }
-           //
-          
-           if (url.contains("/Canciones/listarCancionesAlbum")) {
-            return;
-        }
-       if (url.contains("/auth/consultarRol")) {
-            return;
-        }
-       //temporal
-        if (url.contains("/Artistas/listarTodos")) {
-            return;
-        }
+if (url.contains("/auth/token")) {
+return;
+}
+if (url.contains("/auth/login")) {
+return;
+}
+if (url.contains("/auth/actualizarToken")) {
+return;
+}
+if (url.contains("/auth/consultarRol")) {
+return;
+}
+//temporal
+if(url.contains("/Albums/obtener")){
+return;
+}
+if(url.contains("/Albums/obtenerPorId")){
+return;
+}
+if(url.contains("/Albums/listarIdArtista")){
+return;
+}
+if(url.contains("/Albums/guardar")){
+return;
+}
+if(url.contains("/Albums/eliminar")){
+return;
+}
+if(url.contains("/Albums/editar")){
+return;
+}
+if (url.contains("/Albums/listarCatalogo")) {
+return;
+}
+if(url.contains("/Artistas/listarPorId")){
+return;
+}
+if(url.contains("/Artistas/listarTodos")){
+return;
+}
+if(url.contains("/Artistas/guardar")){
+return;
+}
+if(url.contains("/Artistas/eliminar")){
+return;
+}
+if(url.contains("/Artistas/editar")){
+return;
+}
+if(url.contains("/Artistas/listarPorId")){
+return;
+}
+if (url.contains("/Canciones/listarCatalogo")) {
+return;
+}
+if (url.contains("/Canciones/listarTodos")) {
+return;
+}
+if (url.contains("/Canciones/listarPorId")) {
+return;
+}
+if (url.contains("/Canciones/guardar")) {
+return;
+}
+if (url.contains("/Canciones/editar")) {
+return;
+}
+if (url.contains("/Canciones/eliminar")) {
+return;
+}
+if (url.contains("/Canciones/listarCancionesAlbum")) {
+return;
+}
+if (url.contains("/Canciones/listarCatalogo")) {
+return;
+}
         String token = requestContext.getHeaderString("Authorization");
         if (token == null) {
             wrraper = new ExceptionWrraper("401", "UNAUTHORIZED", "TOKEN INVALIDO", url);
