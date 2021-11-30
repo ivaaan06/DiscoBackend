@@ -41,17 +41,22 @@ public class Carrito {
     
     @Column (name ="costo" , nullable = false)
     private Integer costo;
-    
+    /*
     @OneToMany(mappedBy = "carrito", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Cancion> cancion;
     
     @OneToMany(mappedBy = "carrito", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Album> albumes;
-    
+    */
     @ManyToOne
     private Usuario usuario;
 
     public Carrito() {
+    }
+
+    public Carrito(Integer costo, Usuario usuario) {
+        this.costo = costo;
+        this.usuario = usuario;
     }
 
     
@@ -62,14 +67,6 @@ public class Carrito {
 
     public void setCosto(Integer costo) {
         this.costo = costo;
-    }
-
-    public List<Album> getAlbumes() {
-        return albumes;
-    }
-
-    public void setAlbumes(List<Album> albumes) {
-        this.albumes = albumes;
     }
 
      
@@ -91,13 +88,5 @@ public class Carrito {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
-    public List<Cancion> getCancion() {
-        return cancion;
-    }
-    
-    public void setCancion(List<Cancion> cancion) {
-        this.cancion = cancion;
-    }   
         
 }

@@ -76,15 +76,15 @@ public class Cancion implements Serializable{
     @ManyToOne
     @JoinColumn(name = "id_album", nullable = true)
     private Album album;
-    
+    /*
     @ManyToOne
     @JoinColumn(name = "id_pedido", nullable = true)
-    private Carrito carrito;
+    private Carrito carrito;*/
 
     public Cancion() {
     }
 
-    public Cancion(String nombre, String descripcion, Integer duracion, String nacionalidad, Integer precio, String imagen, Date fLanzamiento, Integer numVentas, Artista artista, Album album, Carrito carrito) {
+    public Cancion(String nombre, String descripcion, Integer duracion, String nacionalidad, Integer precio, String imagen, Date fLanzamiento, Integer numVentas, Artista artista, Album album) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.duracion = duracion;
@@ -95,7 +95,6 @@ public class Cancion implements Serializable{
         this.numVentas = numVentas;
         this.artista = artista;
         this.album = album;
-        this.carrito = carrito;
     }
 
     public Integer getId() {
@@ -190,15 +189,6 @@ public class Cancion implements Serializable{
         this.album = album;
     }
 
-    @JsonIgnore
-    @XmlTransient
-    public Carrito getCarrito() {
-        return carrito;
-    }
-
-    public void setCarrito(Carrito carrito) {
-        this.carrito = carrito;
-    }
 
     
 }

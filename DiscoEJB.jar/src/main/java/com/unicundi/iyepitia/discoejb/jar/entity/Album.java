@@ -79,13 +79,16 @@ public class Album implements Serializable{
     @OneToMany(mappedBy = "album", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Cancion> cancion;
     
+    public Album() {
+    }
+    /*
     @ManyToOne
     @JoinColumn(name = "id_pedido", nullable = true)
     private Carrito carrito;
 
-    public Album() {
-    }
+    
 
+    
     public Album(String nombre, String descripcion, Integer duracion, Integer precio, String imagen, Date fLanzamiento, Integer numVentas, Artista artista, List<Cancion> cancion, Carrito carrito) {
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -98,13 +101,26 @@ public class Album implements Serializable{
         this.cancion = cancion;
         this.carrito = carrito;
     }
-
+    @JsonIgnore
+    @XmlTransient
     public Carrito getCarrito() {
         return carrito;
     }
 
     public void setCarrito(Carrito carrito) {
         this.carrito = carrito;
+    }*/
+
+    public Album(String nombre, String descripcion, Integer duracion, Integer precio, String imagen, Date fLanzamiento, Integer numVentas, Artista artista, List<Cancion> cancion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.duracion = duracion;
+        this.precio = precio;
+        this.imagen = imagen;
+        this.fLanzamiento = fLanzamiento;
+        this.numVentas = numVentas;
+        this.artista = artista;
+        this.cancion = cancion;
     }
 
     
