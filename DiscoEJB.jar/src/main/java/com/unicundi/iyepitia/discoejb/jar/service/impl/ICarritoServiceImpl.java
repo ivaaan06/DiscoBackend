@@ -10,11 +10,13 @@ import com.unicundi.iyepitia.discoejb.jar.repository.ICarritoRepo;
 import com.unicundi.iyepitia.discoejb.jar.service.ICarritoService;
 import java.util.List;
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
 
 /**
  *
  * @author Joseph
  */
+@Stateless
 public class ICarritoServiceImpl implements ICarritoService{
 
     @EJB

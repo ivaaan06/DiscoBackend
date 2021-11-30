@@ -50,6 +50,8 @@ public class Carrito {
     */
     @ManyToOne
     private Usuario usuario;
+    
+    //private Cancion cancion;
 
     public Carrito() {
     }
@@ -58,6 +60,7 @@ public class Carrito {
         this.costo = costo;
         this.usuario = usuario;
     }
+
 
     
     

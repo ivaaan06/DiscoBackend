@@ -8,6 +8,7 @@ package com.unicundi.iyepitia.discoejb.jar.repository.impl;
 import com.unicundi.iyepitia.discoejb.jar.entity.Carrito;
 import com.unicundi.iyepitia.discoejb.jar.repository.ICarritoRepo;
 import java.util.List;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -16,6 +17,7 @@ import javax.persistence.TypedQuery;
  *
  * @author Joseph
  */
+@Stateless
 public class CarritoRepoImpl implements ICarritoRepo{
 
     @PersistenceContext(unitName= "conexionDisco")
